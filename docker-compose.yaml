@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    build:
+      context: ./react-hooks-basic
+    image: react-hooks-basic:latest
+    ports:
+      - "8000:80"
+  api:
+    build:
+      context: ./api
+    image: node-api-test:latest
+    ports:
+      - "8000:80"
